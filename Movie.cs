@@ -19,5 +19,10 @@ namespace cinema
             screening.movie = this;
             return;
         }
+
+        public override string? ToString()
+        {
+            return base.ToString();
+        }
     }   
 }
