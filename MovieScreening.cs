@@ -10,21 +10,22 @@ namespace cinema
     {
         private DateTime dateAndTime { get; set; }
         private double pricePerSeat { get; set; }
+        public Movie movie { get; set; }
 
         public MovieScreening(Movie movie, DateTime dateAndTime, double pricePerSeat)
         {
             this.dateAndTime = dateAndTime;
             this.pricePerSeat = pricePerSeat;
+            this.movie = movie;
         }
 
         public double getPricePerSeat()
         {
             return this.pricePerSeat;
         }
-
-        public string toString()
+        public override string? ToString()
         {
-            return "" ;
+            return base.ToString();
         }
     }
 }
