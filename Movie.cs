@@ -8,7 +8,12 @@ namespace cinema
 {
     public class Movie
     {
-        public string title;
-        
-    }
+        private string title;
+
+        public Movie(string title)
+        {
+            this.title = title;
+        }
+
+    }   
 }
