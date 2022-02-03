@@ -8,10 +8,10 @@ namespace cinema
 {
     class MovieScreening
     {
-        private LocalDateTime dateAndTime { get; set; }
+        private DateTime dateAndTime { get; set; }
         private double pricePerSeat { get; set; }
 
-        private MovieScreening(Movie movie, LocalDateTime dateAndTime, double, pricePerSeat)
+        private MovieScreening(Movie movie, DateTime dateAndTime, double pricePerSeat)
         {
             this.dateAndTime = dateAndTime;
             this.pricePerSeat = pricePerSeat;
