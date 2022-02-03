@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace cinema
 {
-    class MovieScreening
+    public class MovieScreening
     {
-        private LocalDateTime dateAndTime { get; set; }
+        private DateTime dateAndTime { get; set; }
         private double pricePerSeat { get; set; }
 
-        private MovieScreening(Movie movie, LocalDateTime dateAndTime, double, pricePerSeat)
+        public MovieScreening(Movie movie, DateTime dateAndTime, double pricePerSeat)
         {
             this.dateAndTime = dateAndTime;
             this.pricePerSeat = pricePerSeat;
