@@ -8,7 +8,7 @@ namespace cinema
 {
     public class MovieScreening
     {
-        private DateTime dateAndTime { get; set; }
+        public DateTime dateAndTime { get; set; }
         private double pricePerSeat { get; set; }
         public Movie movie { get; set; }
 
@@ -23,6 +23,7 @@ namespace cinema
         {
             return this.pricePerSeat;
         }
+
         public override string? ToString()
         {
             return base.ToString();
