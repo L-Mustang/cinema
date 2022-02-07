@@ -8,7 +8,7 @@ namespace cinema_unit_tests
     public class MovieScreeningTest
     {
         [TestMethod]
-        public void TestMovieScreening()
+        public void TestMovieScreeningConstructor()
         {
             //Arrange
             Movie movie = new Movie("Shrek");
