@@ -10,10 +10,9 @@ namespace cinema_unit_tests
         public void TestMovie()
         {
             //Arrange
-            Movie movie = new Movie("Shrek");
 
             //Act
-
+            Movie movie = new Movie("Shrek");
             //Assert
             Assert.IsNotNull(movie);
         }
