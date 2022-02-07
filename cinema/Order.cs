@@ -52,13 +52,30 @@ namespace cinema
 
             });
 
-
             //1
             if (this.isStudentOrder || day >= DayOfWeek.Monday && day <= DayOfWeek.Thursday)
             {
-                for(int i=0; i<tickets.Count;i+=2)
+                try
                 {
-                    prices[i] = 0;
+                    for (int i = 1; i < tickets.Count; i += 2)
+                    {
+                        prices[i] = 0;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);          
+                }
+            }
+            //2
+            else
+            {
+                if (this.tickets.Count >= 6)
+                {
+                    for(int i = 0;i < prices.Count; i++)
+                    {
+                        prices[i] *= 0.9;
+                    }
                 }
             }
 
@@ -66,15 +83,6 @@ namespace cinema
             {
                 totalPrice += i;
             });
-            
-            //2
-            if(!this.isStudentOrder && day == DayOfWeek.Saturday || day == DayOfWeek.Sunday)
-            {
-                if (this.tickets.Count >= 6)
-                {
-                    totalPrice = totalPrice * 0.9;
-                }
-            }
          
             return totalPrice;
         }

@@ -1,0 +1,43 @@
+﻿1:-
+A: Als Premium
+2: Nee
+3: Ja, dan B
+	B: is student?
+	4: Nee, prijs +3€, dan C
+	5: Ja, prijs +2€ en 2e kaartje gratis
+
+C: Student of Weekdag?
+6: Nee, dan D
+9: Ja, elk 2e kaartje gratis
+	
+	D: Meer dan 6 ticket?
+	7: Nee
+	8: Ja, 10% korting
+Eind
+
+Alle mogelijke Paden
+ 	1>2>6>7
+	1>2>6>8
+	1>2>9
+	1>3>4>6>7
+	1>3>4>6>8
+	1>3>4>9
+	1>3>5
+
+Testpaden:
+ 	1>2>6>7		Geen premium, Geen student, geen weekdag, <6 tickets
+	1>2>6>8		Geen premium, Geen student, geen weekdag, >=6 tickets
+	1>2>9		Geen premium, Geen student, weekdag
+	1>3>4>6>7	Wel premium, geen student, geen weekdag, <6 tickets
+	1>3>4>6>8	Wel premium, geen student, geen weekdag, >=6 tickets
+	1>3>4>9		Wel premium, geen student, weekdag
+	1>3>5		Wel premium, studentenorder
+
+Testpaden resultaten:
+1>2>6>7		-
+1>2>6>8		10% korting
+1>2>9		2e kaartje gratis
+1>3>4>6>7	3€+ op premium tickets
+1>3>4>6>8	3€+ op premium tickets, 10% korting
+1>3>4>9		3€+ op premium tickets, 2e kaart gratis
+1>3>5		2€+ op premium tickets, 2e kaart gratis
