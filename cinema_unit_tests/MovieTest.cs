@@ -7,7 +7,7 @@ namespace cinema_unit_tests
     public class MovieTest
     {
         [TestMethod]
-        public void TestMovie()
+        public void TestMovieConstructor()
         {
             //Arrange
 
