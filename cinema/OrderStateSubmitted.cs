@@ -55,7 +55,7 @@ namespace cinema
 
         public void notify()
         {
-            Console.WriteLine("Notification of order to be paid")
+            Console.WriteLine("Notification of order to be paid");
         }
     }
 }

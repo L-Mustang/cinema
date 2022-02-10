@@ -138,6 +138,11 @@ namespace cinema
             this.state = state;
         }
 
+        public OrderState getState()
+        {
+            return this.state;
+        }
+
         public OrderState getNotSubmittedState()
         {
             return this.stateNotSubmitted;
