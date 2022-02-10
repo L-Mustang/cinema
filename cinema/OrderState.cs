@@ -8,6 +8,10 @@ namespace cinema
 {
     public interface OrderState
     {
-
+        public void edit();
+        public void submit();
+        public void pay();
+        public void provision();
+        public void cancel();
     }
 }

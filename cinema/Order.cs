@@ -10,14 +10,25 @@ namespace cinema
 {
     public class Order
     {
-        final static int NotSumbitted
+        private OrderState stateNotSubmitted;
+        private OrderState stateSubmitted;
+        private OrderState stateProcessed;
+        private OrderState stateProvisional;
+
+        private OrderState state;
 
         private int orderNr { get; set; }
         private bool isStudentOrder { get; set; }
-        private List<MovieTicket> tickets;  
+        public List<MovieTicket> tickets;
 
         public Order(int orderNr, bool isStudentOrder)
         {
+            this.stateNotSubmitted = new OrderStateNotSubmitted(this);
+            this.stateSubmitted = new OrderStateSubmitted(this);
+            this.stateProcessed = new OrderStateProcessed(this);
+            this.stateProvisional = new OrderStateProvisional(this);
+            this.state = stateNotSubmitted;
+
             this.orderNr = orderNr;
             this.isStudentOrder = isStudentOrder;
             this.tickets = new List<MovieTicket>();
@@ -99,6 +110,31 @@ namespace cinema
             {
                 Console.WriteLine(JsonSerializer.Serialize(this));
             }
+        }
+
+        public void setState(OrderState state)
+        {
+            this.state = state;
+        }
+
+        public OrderState getNotSubmittedState()
+        {
+            return this.stateNotSubmitted;
+        }
+
+        public OrderState getSubmittedState()
+        {
+            return this.stateSubmitted;
+        }
+
+        public OrderState getProcessedState()
+        {
+            return this.stateProcessed;
+        }
+
+        public OrderState getProvisionalState()
+        {
+            return this.stateProvisional;
         }
 
 
