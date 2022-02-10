@@ -112,6 +112,27 @@ namespace cinema
             }
         }
 
+        public void edit()
+        {
+            state.edit();
+        }
+        public void pay()
+        {
+            state.pay();
+        }
+        public void provision()
+        {
+            state.provision();
+        }
+        public void cancel()
+        {
+            state.cancel();
+        }
+        public void submit()
+        {
+            state.submit();
+        }
+
         public void setState(OrderState state)
         {
             this.state = state;
