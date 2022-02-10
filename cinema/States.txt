@@ -1,0 +1,6 @@
+﻿Commonality		Variation															Events
+State			Not-submitted	: Order is aangemaakt								: 
+				Submitted		: Order is gereserveerd en kan betaald worden		: 
+				Processed		: Betaald en verwerkt								: 
+
+

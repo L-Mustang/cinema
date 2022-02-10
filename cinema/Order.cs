@@ -10,6 +10,8 @@ namespace cinema
 {
     public class Order
     {
+        final static int NotSumbitted
+
         private int orderNr { get; set; }
         private bool isStudentOrder { get; set; }
         private List<MovieTicket> tickets;  
