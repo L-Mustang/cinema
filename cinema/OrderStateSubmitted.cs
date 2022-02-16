@@ -57,5 +57,10 @@ namespace cinema
         {
             Console.WriteLine("Notification of order to be paid");
         }
+
+        public override string? ToString()
+        {
+            return "submitted";
+        }
     }
 }

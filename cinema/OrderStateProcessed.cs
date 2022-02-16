@@ -39,5 +39,9 @@ namespace cinema
         {
             throw new NotImplementedException();
         }
+        public override string? ToString()
+        {
+            return "processed";
+        }
     }
 }

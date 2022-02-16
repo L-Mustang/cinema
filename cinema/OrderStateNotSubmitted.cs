@@ -39,5 +39,9 @@ namespace cinema
         {
             order.setState(order.getSubmittedState());
         }
+        public override string? ToString()
+        {
+            return "not submitted";
+        }
     }
 }
