@@ -10,7 +10,7 @@ namespace cinema.lib
     {
         public void SendMessage(string msg, int receiverID)
         {
-            Console.WriteLine(msg);
+            Console.Out.WriteLine(msg);
         }
     }
 }

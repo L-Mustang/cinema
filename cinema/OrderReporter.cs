@@ -9,6 +9,7 @@ namespace cinema
     public class OrderReporter : IObserver<Order>
     {
         private IDisposable? unsubscriber;
+        public string? message;
 
         public virtual void Subscribe(IObservable<Order> provider)
         {
@@ -32,7 +33,7 @@ namespace cinema
 
         public virtual void OnNext(Order order)
         {
-            string message = $"Your order has been set to {order.state}";
+            this.message = $"Your order has been set to {order.state}";
             MessageAdapter messageAdapterFacebook = new MessageAdapterFacebook();
             MessageAdapter messageAdapterIMessage = new MessageAdapterIMessage();
             MessageAdapter messageAdapterWhatsapp = new MessageAdapterWhatsApp();

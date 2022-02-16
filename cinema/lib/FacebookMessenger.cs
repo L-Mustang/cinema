@@ -14,7 +14,7 @@ namespace cinema.lib
 
         public void SendFBMessage(string msg, int receiverId)
         {
-            Console.WriteLine(msg);
+            Console.Out.WriteLine(msg);
         }
     }
 }

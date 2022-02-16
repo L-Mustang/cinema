@@ -10,6 +10,7 @@ namespace cinema
     public class MessageAdapterIMessage : MessageAdapter
     {
         public IMessage instance;
+        public string message;
 
         public MessageAdapterIMessage()
         {
@@ -18,6 +19,7 @@ namespace cinema
 
         public void SendMessage(string message)
         {
+            this.message = "IMessage: " + message;
             // Dummy receiver
             instance.SendMessage("IMessage: " + message, 1);
         }

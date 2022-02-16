@@ -18,7 +18,7 @@ namespace cinema.lib
         }
         public bool POSTMessage(string msg)
         {
-            Console.WriteLine(msg);
+            Console.Out.WriteLine(msg);
             return true;
         }
 

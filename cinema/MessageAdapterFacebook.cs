@@ -10,6 +10,7 @@ namespace cinema
     public class MessageAdapterFacebook : MessageAdapter
     {
         private FacebookMessenger instance;
+        public string message;
 
         public MessageAdapterFacebook()
         {
@@ -18,6 +19,7 @@ namespace cinema
 
         public void SendMessage(string message)
         {
+            this.message = "Facebook: " + message;
             //Dummy receiver
             instance.SendFBMessage("Facebook: "+ message, 1);
         }

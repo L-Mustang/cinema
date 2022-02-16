@@ -8,7 +8,7 @@ namespace cinema
 {
     public class OrderMonitor : IObservable<Order>
     {
-        List<IObserver<Order>> observers;
+        public List<IObserver<Order>> observers;
 
         public OrderMonitor()
         {
