@@ -14,7 +14,6 @@ namespace cinema
         private OrderState stateSubmitted;
         private OrderState stateProcessed;
         private OrderState stateProvisional;
-
         private OrderState state;
 
         private int orderNr { get; set; }
@@ -32,11 +31,6 @@ namespace cinema
             this.orderNr = orderNr;
             this.isStudentOrder = isStudentOrder;
             this.tickets = new List<MovieTicket>();
-        }
-
-        public int OrderNr()
-        {
-            return this.orderNr;
         }
 
         public void addSeatReservation(MovieTicket ticket)
@@ -162,7 +156,6 @@ namespace cinema
         {
             return this.stateProvisional;
         }
-
 
     }
 }
